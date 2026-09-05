@@ -8,6 +8,7 @@ import Clutter from 'gi://Clutter';
 
 import {Keys, ScalingMode} from './enums.js';
 import {GstPlayerProcess} from './core/core_process.js';
+import {PLAYER_ENTRYPOINT} from './player/run.js';
 
 import {SHELL_VERSION} from './utils/shell_version.js';
 import {logWarn, logError} from './utils/logging.js';

@@ -1,10 +1,21 @@
 import Gio from 'gi://Gio';
-import Gtk from 'gi://Gtk?version=4.0';
-import Gdk from 'gi://Gdk?version=4.0';
 
 import Pipeline from "./pipeline.js";
 import { ScalingMode } from "../enums.js";
 import CommandHandler from "./command_handler.js";
+
+let Gtk;
+let Gdk;
+
+function loadGtk() {
+    if (Gtk)
+        return;
+
+    imports.gi.versions.Gtk = '4.0';
+    imports.gi.versions.Gdk = '4.0';
+    Gtk = imports.gi.Gtk;
+    Gdk = imports.gi.Gdk;
+}
 
 export default class PlayerMulti {
     constructor({ 
@@ -26,6 +37,7 @@ export default class PlayerMulti {
     }
 
     run() {
+        loadGtk();
         this._app = new Gtk.Application({
             flags: Gio.ApplicationFlags.FLAGS_NONE
         });
