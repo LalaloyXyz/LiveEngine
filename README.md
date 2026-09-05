@@ -19,7 +19,26 @@ On Fedora, the required GStreamer components are normally available from the sta
 
 ## Installation
 
-Install from a local checkout using the UUID in `metadata.json`:
+The recommended way to install Live Engine is through the official GNOME
+Extensions website or the Extension Manager application. This keeps the
+extension updated and installs it in the correct location automatically.
+
+1. Open the [GNOME Extensions website](https://extensions.gnome.org/) and
+   search for **Live Engine**.
+2. Select **Install** and confirm the installation in your browser.
+3. Open **Extensions** or **Extension Manager**, enable **Live Engine**, and
+   open its Preferences to choose a video or GIF.
+
+You can also install it with **Extension Manager**:
+
+1. Open Extension Manager from your application menu.
+2. Search for **Live Engine**.
+3. Select it, install it, and switch it on.
+
+### Manual installation for development
+
+Manual installation is intended for contributors testing a local checkout.
+From the repository directory, run:
 
 ```bash
 install_dir="$HOME/.local/share/gnome-shell/extensions/LiveEngine@LalaloyXyz"
@@ -29,7 +48,8 @@ glib-compile-schemas "$install_dir/schemas"
 gnome-extensions enable LiveEngine@LalaloyXyz
 ```
 
-Open the extension’s Preferences, choose a video or GIF, and adjust playback settings. If GNOME Shell does not discover the extension, log out and back in before enabling it.
+If GNOME Shell does not discover a manually installed extension, log out and
+back in before enabling it.
 
 ## Development
 
