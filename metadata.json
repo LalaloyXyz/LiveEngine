@@ -1,0 +1,17 @@
+{
+  "name": "Live Engine",
+  "description": "Live desktop wallpaper.",
+  "uuid": "LiveEngine@LalaloyXyz",
+  "url": "https://github.com/LalaloyXyz/nowplay",
+  "version-name": "1.0.0",
+  
+  "session-modes": [
+    "user"
+  ],
+
+  "settings-schema": "org.gnome.shell.extensions.liveengine",
+  "shell-version": ["46", "47", "48", "49", "50"],
+  "donations": {
+    "buymeacoffee": "banditpetsw"
+  }
+}

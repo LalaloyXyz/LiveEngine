@@ -1,0 +1,26 @@
+<schemalist>
+    <schema id="org.gnome.shell.extensions.liveengine" path="/org/gnome/shell/extensions/liveengine/">
+        <key name="general-enabled" type="b">
+            <default>true</default>
+            <summary>Whether the live wallpaper is running</summary>
+        </key>
+        <key name="background-video-path" type="s">
+            <default>""</default>
+            <summary>Path to wallpaper video</summary>
+        </key>
+        <key name="background-video-scaling-mode" type="i">
+            <range min="0" max="2" />
+            <default>0</default>
+            <summary>Wallpaper video scaling mode</summary>
+        </key>
+        <key name="background-video-looped" type="b">
+            <default>true</default>
+            <summary>Whether to loop the wallpaper video</summary>
+        </key>
+        <key name="background-audio-volume" type="i">
+            <range min="0" max="100" />
+            <default>0</default>
+            <summary>Wallpaper audio volume</summary>
+        </key>
+    </schema>
+</schemalist>

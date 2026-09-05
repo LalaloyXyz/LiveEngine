@@ -1,0 +1,31 @@
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.secret
+*.key
+.agents/
+.codex/
+
+# Generated files
+schemas/gschemas.compiled
+*.log
+*.tmp
+*.swp
+
+# Local media and runtime data
+*.mp4
+*.mkv
+*.webm
+*.mov
+*.avi
+*.pid
+dist/
+build/
+*.zip
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
