@@ -1,62 +1,122 @@
+<div align="center">
+
+<img src="https://extensions.gnome.org/extension-data/icons/icon_10873.png" width="128" alt="Live Engine">
+
 # Live Engine
 
-Live Engine is a GNOME Shell extension that renders a video or GIF as a live desktop wallpaper behind normal windows. Playback uses GStreamer through GNOME’s native video stack.
+### A live video wallpaper for GNOME Shell.
 
-## Features
+<br>
 
-- Video and GIF wallpapers with cover, fit, and stretch scaling
-- Multi-monitor support
-- Adjustable frame rate, fade-in, blur, brightness, audio, and looping
-- Automatic pause while the computer is suspended
+![GNOME Shell](https://img.shields.io/badge/GNOME%20Shell-46%20%7C%2047%20%7C%2048%20%7C%2049%20%7C%2050-4A86CF)
+![Platform](https://img.shields.io/badge/Platform-Linux-FCC624)
+![License](https://img.shields.io/badge/License-GPL--3.0-green)
 
-## Requirements
+<br><br>
 
-- GNOME Shell 46–50
-- GStreamer with the GTK4 video sink (`gtk4paintablesink`)
+<a href="https://extensions.gnome.org/extension/10873/live-engine/">
+  <img src="https://img.shields.io/badge/Download-GNOME%20Extensions-4A86CF?style=for-the-badge" alt="Download from GNOME Extensions">
+</a>
+
+<br><br>
+
+<img src="https://extensions.gnome.org/extension-data/screenshots/screenshot_10873.gif" alt="Live Engine preview">
+
+</div>
+
+---
+
+## ✨ Overview
+
+**Live Engine** turns a local video or GIF into a live desktop wallpaper behind
+your normal windows. It uses GStreamer and GNOME’s native video stack, with a
+Preferences page for choosing the media file and adjusting playback.
+
+## 🎥 Features
+
+- Use video files or animated GIFs as desktop wallpapers
+- Choose **Stretch**, **Fit**, or **Cover** scaling
+- Loop the wallpaper video
+- Adjust wallpaper audio volume from 0–100%
+- Support multiple monitors
+- Fade the wallpaper in smoothly
+- Pause playback while the computer is suspended
+- Enable or disable the wallpaper without uninstalling the extension
+
+## 🔧 Requirements
+
+- Linux with GNOME Shell 46, 47, 48, 49, or 50
+- GStreamer with the `gtk4paintablesink` video sink
 - A local video or GIF file
 
-On Fedora, the required GStreamer components are normally available from the standard system packages. The extension reports a dependency error in Preferences when the video sink cannot be found.
+On Fedora, the required GStreamer components are normally available from the
+standard system packages. If the GTK video sink is unavailable, Live Engine
+shows a dependency message in Preferences.
 
-## Installation
+## 📦 Installation
 
-The recommended way to install Live Engine is through the official GNOME
-Extensions website or the Extension Manager application. This keeps the
-extension updated and installs it in the correct location automatically.
+### GNOME Extensions
 
-1. Open the [GNOME Extensions website](https://extensions.gnome.org/) and
-   search for **Live Engine**.
-2. Select **Install** and confirm the installation in your browser.
-3. Open **Extensions** or **Extension Manager**, enable **Live Engine**, and
-   open its Preferences to choose a video or GIF.
+Install Live Engine from the official extension page:
 
-You can also install it with **Extension Manager**:
+[extensions.gnome.org/extension/10873/live-engine](https://extensions.gnome.org/extension/10873/live-engine/)
 
-1. Open Extension Manager from your application menu.
-2. Search for **Live Engine**.
-3. Select it, install it, and switch it on.
+You can also search for **Live Engine** in the **Extension Manager** app.
+After installation, enable the extension and open its Preferences.
 
-### Manual installation for development
+### Manual installation
 
-Manual installation is intended for contributors testing a local checkout.
-From the repository directory, run:
+For development or local testing:
 
 ```bash
-install_dir="$HOME/.local/share/gnome-shell/extensions/LiveEngine@LalaloyXyz"
+git clone https://github.com/LalaloyXyz/LiveEngine.git
 mkdir -p "$HOME/.local/share/gnome-shell/extensions"
-cp -r . "$install_dir"
-glib-compile-schemas "$install_dir/schemas"
+cp -r LiveEngine "$HOME/.local/share/gnome-shell/extensions/LiveEngine@LalaloyXyz"
+glib-compile-schemas "$HOME/.local/share/gnome-shell/extensions/LiveEngine@LalaloyXyz/schemas"
 gnome-extensions enable LiveEngine@LalaloyXyz
 ```
 
-If GNOME Shell does not discover a manually installed extension, log out and
-back in before enabling it.
+If GNOME Shell does not discover the extension, log out and back in, then
+enable it again.
 
-## Development
+## 🚀 Usage
 
-Runtime code is in `extension.js`, `core/`, and `player/`; Preferences UI is in `prefs.js` and `ui/`; shared helpers are in `utils/`. There is no automated test suite or build system. After changing `schemas/org.gnome.shell.extensions.liveengine.gschema.xml`, rebuild the compiled schema:
+1. Open **Live Engine Preferences**.
+2. Click **Browse** and choose a local video or GIF file.
+3. Select the desired scaling mode.
+4. Set the volume and looping options.
+5. Enable **Live wallpaper**.
+
+The wallpaper runs behind application windows and follows monitor and workspace
+changes automatically.
+
+## 🛠 Development
+
+Runtime code is in `extension.js`, `core/`, and `player/`. Preferences UI is in
+`prefs.js` and `ui/`, while shared helpers are in `utils/`.
+
+There is no automated test suite or build system. After changing the GSettings
+schema, regenerate the compiled schema before testing:
 
 ```bash
 glib-compile-schemas schemas/
 ```
 
-Manually verify enabling/disabling, Preferences persistence, playback, monitor changes, Overview/workspace transitions, and suspend/resume on the target GNOME Shell version.
+Manually verify enabling and disabling, Preferences persistence, playback,
+monitor changes, Overview/workspace transitions, and suspend/resume behavior.
+
+## 🤝 Contributing
+
+Bug reports, feature requests, and contributions are welcome. Please open an
+issue or submit a pull request on [GitHub](https://github.com/LalaloyXyz/LiveEngine).
+
+## 📄 License
+
+Live Engine is free software released under the [GNU General Public License
+version 3.0](LICENSE).
+
+<div align="center">
+
+Made with ❤️ for GNOME
+
+</div>
