@@ -22,7 +22,7 @@
   <img src="https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-orange?style=for-the-badge" alt="Buy me a coffee">
 </a>
 
-<br>
+<br><br>
 
 <img src="https://extensions.gnome.org/extension-data/screenshots/screenshot_10873.gif" alt="Live Engine preview">
 
