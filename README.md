@@ -68,21 +68,6 @@ Install Live Engine from the official extension page:
 You can also search for **Live Engine** in the **Extension Manager** app.
 After installation, enable the extension and open its Preferences.
 
-### Manual installation
-
-For development or local testing:
-
-```bash
-git clone https://github.com/LalaloyXyz/LiveEngine.git
-mkdir -p "$HOME/.local/share/gnome-shell/extensions"
-cp -r LiveEngine "$HOME/.local/share/gnome-shell/extensions/LiveEngine@LalaloyXyz"
-glib-compile-schemas "$HOME/.local/share/gnome-shell/extensions/LiveEngine@LalaloyXyz/schemas"
-gnome-extensions enable LiveEngine@LalaloyXyz
-```
-
-If GNOME Shell does not discover the extension, log out and back in, then
-enable it again.
-
 ## 🚀 Usage
 
 1. Open **Live Engine Preferences**.
@@ -93,21 +78,6 @@ enable it again.
 
 The wallpaper runs behind application windows and follows monitor and workspace
 changes automatically.
-
-## 🛠 Development
-
-Runtime code is in `extension.js`, `core/`, and `player/`. Preferences UI is in
-`prefs.js` and `ui/`, while shared helpers are in `utils/`.
-
-There is no automated test suite or build system. After changing the GSettings
-schema, regenerate the compiled schema before testing:
-
-```bash
-glib-compile-schemas schemas/
-```
-
-Manually verify enabling and disabling, Preferences persistence, playback,
-monitor changes, Overview/workspace transitions, and suspend/resume behavior.
 
 ## 🤝 Contributing
 
