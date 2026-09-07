@@ -12,7 +12,7 @@
 ![Platform](https://img.shields.io/badge/Platform-Linux-FCC624)
 ![License](https://img.shields.io/badge/License-GPL--3.0-green)
 
-<br><br>
+<br>
 
 <a href="https://extensions.gnome.org/extension/10873/live-engine/">
   <img src="https://img.shields.io/badge/Download-GNOME%20Extensions-4A86CF?style=for-the-badge" alt="Download from GNOME Extensions">
@@ -22,7 +22,7 @@
   <img src="https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Support-orange?style=for-the-badge" alt="Buy me a coffee">
 </a>
 
-<br><br>
+<br>
 
 <img src="https://extensions.gnome.org/extension-data/screenshots/screenshot_10873.gif" alt="Live Engine preview">
 
